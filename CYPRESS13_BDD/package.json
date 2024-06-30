@@ -1,0 +1,31 @@
+{
+  "name": "cypress13_bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "merge-reports": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
+    "generate-report": "marge cypress/reports/report.json --reportDir cypress/reports --reportTitle 'Cypress Test Results'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cucumber-html-reporter": "^7.1.1",
+    "cypress": "^13.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "mocha": "^10.5.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "typescript": "^5.5.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/e2e/cucumber/Tests"
+  }
+}
