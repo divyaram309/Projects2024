@@ -24,4 +24,5 @@ And("User click on sign in button", () => {
 Then("Validate the title after login", () => {
   login.verifyPageTitle();
   cy.takeScreenshot('validated-title');
+
 });
